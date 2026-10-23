@@ -1,0 +1,36 @@
+HANDS-FREE EDGE CONTROLLER 4.0.0 — AUTOMATED TEST REPORT
+
+Environment: Node.js v22.16.0; deterministic Node VM tests.
+
+PASS — gesture-core.test.js: 13 assertions
+- index-only, two-finger, three-finger/pinky-folded and open-palm pose classification
+- fist and pinch labels
+- extended thumb/all-fingers pose
+- pointer coordinate center and bounds
+
+PASS — page-content.test.js: 19 assertions
+- versioned PING response
+- pointer placement and script-driven mousemove
+- click target
+- page scrolling
+- pause/play accessible media
+- virtual keyboard creation/removal and pointer hide
+
+PASS — controller-flow.test.js: 4 assertions
+- target check on startup
+- simulated index gesture produces MOVE
+- simulated pinch transition produces CLICK
+- gesture label reports the current pose
+
+PASS — extension-routing.test.js: 10 assertions
+- target check and self-healing content-script injection
+- versioned message channel
+- command acknowledgement/error propagation
+- tab switching
+
+PASS — node --check for all shipped JavaScript files
+PASS — manifest JSON parse and HTML local asset-reference checks
+PASS — ZIP integrity check after packaging
+
+LIMITATION
+These are automated tests with deterministic mocks. This environment could not provide a reliable Microsoft Edge extension session and a physical webcam, so live webcam/real-site behavior is not certified. Before commercial sale, run RELEASE_CHECKLIST.md on supported Windows/Edge installations and complete the store/privacy review.
