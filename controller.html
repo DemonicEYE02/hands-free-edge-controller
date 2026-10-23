@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hands-Free Edge Controller</title>
+  <link rel="stylesheet" href="controller.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><div class="brand-icon">✋</div><div><h1>Hands-Free Edge</h1><p>Browser gesture control <span class="version">v4.0.0</span></p></div></div>
+    <span id="status" class="status loading">Loading online engine…</span>
+  </header>
+  <main>
+    <section class="preview-card">
+      <div class="preview">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="canvas"></canvas>
+        <div id="message">Connecting to online tracking engine…</div>
+      </div>
+      <div class="preview-foot"><span id="tracking">Camera not started — click Start</span><span id="gestureStatus">Gesture: none</span><span id="fps">Low-power mode · ~12 FPS</span></div>
+    </section>
+    <section class="panel">
+      <div class="section-head"><h2>Control center</h2><span id="targetStatus" class="target">Target: current webpage</span></div>
+      <div class="buttons"><button id="start">Start / restart camera</button><button id="pause" class="secondary">Disable gestures</button></div>
+      <div class="setting"><label for="sens">Pointer sensitivity <b id="sensval">5</b></label><input id="sens" type="range" min="1" max="10" value="5"></div>
+      <div class="setting"><label for="scroll">Scroll speed <b id="scrollval">5</b></label><input id="scroll" type="range" min="1" max="10" value="5"></div>
+      <label class="check"><input id="pointer" type="checkbox" checked> Show pointer on webpages</label>
+      <div class="guide-head"><h2>Gesture guide</h2><span>Hold steady briefly for actions</span></div>
+      <div class="guide">
+        <div><span class="gesture">☝️</span><p><b>Index finger up</b><br>Move pointer</p></div>
+        <div><span class="gesture">🤏</span><p><b>Thumb + index pinch</b><br>Click / select</p></div>
+        <div><span class="gesture">✊</span><p><b>Fist</b><br>Pause media</p></div>
+        <div><span class="gesture">✋</span><p><b>Open palm</b><br>Play media</p></div>
+        <div><span class="gesture">✌️ ↔</span><p><b>Two fingers + horizontal swipe</b><br>Switch browser tabs</p></div>
+        <div><span class="gesture">✌️ ↕</span><p><b>Two fingers + vertical move</b><br>Scroll page</p></div>
+        <div><span class="gesture">🤘</span><p><b>Index, middle, ring up; pinky folded</b><br>Click / select</p></div>
+        <div><span class="gesture">👐</span><p><b>Both hands, all 10 fingers up</b><br>Open keyboard; fold any finger to close</p></div>
+      </div>
+      <div id="log" class="log" role="status">Camera access starts when you press the button. If it fails, this log shows the reason. Camera frames stay in the browser.</div>
+      <p class="fine">This runs in the browser, not as a Windows system mouse. Some webpages ignore synthetic clicks; Edge settings, extension pages and some PDF viewers are protected.</p>
+    </section>
+  </main>
+  <iframe id="visionFrame" title="Online hand-tracking engine" src="vision-sandbox.html" aria-hidden="true"></iframe>
+  <script src="gesture-core.js"></script>
+  <script src="controller.js"></script>
+</body>
+</html>
