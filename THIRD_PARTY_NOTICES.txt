@@ -1,0 +1,15 @@
+THIRD-PARTY COMPONENTS
+
+MediaPipe Tasks Vision (web runtime)
+- Package: @mediapipe/tasks-vision
+- Version referenced by the extension: 0.10.14
+- CDN: https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/
+- Project/docs: https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker/web_js
+- Package metadata lists the package under Apache-2.0; review the exact distribution files and package license before redistribution.
+
+MediaPipe Hand Landmarker model
+- Loaded from: https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
+- Model is fetched from Google Storage at runtime; it is not bundled in this ZIP.
+- Review applicable model terms and current package documentation for commercial use.
+
+No MediaPipe JavaScript bundle, WebAssembly binary, or task model is bundled in this archive.
