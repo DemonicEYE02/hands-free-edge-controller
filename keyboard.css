@@ -1,7 +1,0 @@
-body { margin: 0; background: linear-gradient(180deg, #030305, #0a0a15); color: #00ff88; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height: 100vh; overflow: hidden; }
-#kb-container { max-width: 860px; margin: 10px auto; padding: 16px; background: rgba(0,0,0,0.75); border: 2px solid #00ff88; border-radius: 16px; box-shadow: 0 0 30px rgba(0,255,136,0.25); backdrop-filter: blur(6px); }
-#kb-display { background: #000; color: #0f0; padding: 14px; border: 1px solid #00ff88; border-radius: 8px; min-height: 44px; font-size: 24px; letter-spacing: 2px; text-align: left; overflow-x: auto; white-space: nowrap; box-shadow: inset 0 0 10px #00ff8820; }
-.kb-row { display: flex; gap: 8px; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
-.kb-row button { background: linear-gradient(135deg, #0f3 0%, #0a8 100%); border: 1.5px solid #00ff88; color: #fff; font-size: 20px; padding: 16px 14px; border-radius: 10px; min-width: 52px; cursor: pointer; font-weight: bold; text-shadow: 0 0 6px #00ff88; transition: all 0.15s ease; box-shadow: 0 4px 10px rgba(0,255,136,0.25); }
-.kb-row button:hover { background: linear-gradient(135deg, #0cf, #08c); transform: scale(1.08); box-shadow: 0 6px 20px rgba(0,255,136,0.6); }
-.kb-row button:active { transform: scale(0.96); }
