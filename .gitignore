@@ -1,0 +1,18 @@
+# Dependencies / local caches
+node_modules/
+npm-debug.log
+*.log
+
+# Build artifacts
+/dist
+/build
+/*.zip
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporary test outputs
+/test-output/
