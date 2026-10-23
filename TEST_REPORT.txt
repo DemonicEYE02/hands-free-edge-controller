@@ -1,0 +1,36 @@
+HANDS-FREE EDGE CONTROLLER 4.1.0 — AUTOMATED TEST REPORT
+
+Environment: Node.js v22.16.0; deterministic Node VM tests.
+
+PASS — gesture-core.test.js: 18 assertions
+- index-only, two-finger, three-finger/pinky-folded and open-palm pose classification
+- fist and pinch labels; extended thumb/all-fingers pose
+- pointer coordinate center and bounds
+- mirrored, clamped keyboard anchoring under two detected hands
+- upward/downward continuous-scroll direction and movement dead zone
+
+PASS — page-content.test.js: 30 assertions
+- v4.1 message-channel PING
+- on-page pointer placement, synthetic move and click
+- page scroll and continuous scroll up/down/reversal/stop
+- pause/play accessible media
+- floating keyboard anchoring, five-row QWERTY key layout, focus-preserving text insertion, keyboard close
+
+PASS — controller-flow.test.js: 9 assertions
+- target check on startup
+- simulated index gesture produces MOVE and pinch produces CLICK
+- simulated upward two-finger movement starts continuous upward scrolling
+- two simulated open hands trigger a keyboard command with normalized anchor coordinates
+- keyboard and compact-panel controls are wired
+
+PASS — extension-routing.test.js: 12 assertions
+- target check and injection retry when a stale receiver silently returns undefined
+- v4.1 message channel and page acknowledgement/error propagation
+- tab switching and compact-window opening
+
+PASS — node --check for every shipped JavaScript file
+PASS — manifest JSON parse and local HTML asset-reference checks
+PASS — ZIP integrity check after packaging
+
+LIMITATION
+These are automated tests with deterministic mocks. There was no reliable live Microsoft Edge session with a physical webcam and permission prompt in this environment, and first-run MediaPipe assets require an external connection. Do not claim universal compatibility or sale-readiness solely from these tests. Run RELEASE_CHECKLIST.md against supported Windows/Edge builds and complete the store/privacy review before commercial release.
